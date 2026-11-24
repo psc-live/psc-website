@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Physical Sciences Consultorium | PSC</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #07111f;
+            color: white;
+        }
+
+        /* HEADER */
+
+        header {
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #20364d;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+        }
+
+        .brand-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .brand-tagline {
+            color: #42d9ff;
+            font-size: 10px;
+            letter-spacing: 2px;
+            margin-top: 6px;
+        }
+
+        nav a {
+            color: #d0deec;
+            text-decoration: none;
+            margin-left: 22px;
+        }
+
+        nav a:hover {
+            color: #42d9ff;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 75vh;
+            padding: 100px 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: radial-gradient(
+                circle at 80% 30%,
+                #163d5c,
+                #07111f 65%
+            );
+        }
+
+        .tag {
+            color: #42d9ff;
+            letter-spacing: 3px;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: clamp(45px, 7vw, 82px);
+            max-width: 850px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #42d9ff;
+        }
+
+        .hero p {
+            color: #c0d0df;
+            font-size: 19px;
+            line-height: 1.8;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            background: #42d9ff;
+            color: #07111f;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            width: fit-content;
+        }
+
+        /* COMMON SECTION */
+
+        .section {
+            padding: 85px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin: 15px 0;
+        }
+
+        .section-title p {
+            color: #b6c8da;
+            line-height: 1.8;
+        }
+
+        /* EXPLORE PSC */
+
+        .explore {
+            background: #0b192a;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: #10243a;
+            padding: 30px;
+            border: 1px solid #25435e;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 15px 0;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #b6c8da;
+            line-height: 1.7;
+        }
+
+        .icon {
+            font-size: 32px;
+        }
+
+        /* ABOUT PSC */
+
+        .about {
+            background: #07111f;
+        }
+
+        .about-intro {
+            max-width: 850px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .about-intro h2 {
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+
+        .about-intro p {
+            color: #c0d0df;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .about-box {
+            padding: 32px;
+            background: #10243a;
+            border: 1px solid #25435e;
+            border-radius: 10px;
+        }
+
+        .about-box h3 {
+            color: #42d9ff;
+            font-size: 23px;
+            margin-bottom: 18px;
+        }
+
+        .about-box p {
+            color: #b6c8da;
+            line-height: 1.8;
+        }
+
+        .focus-list {
+            margin-top: 15px;
+            padding-left: 20px;
+            color: #c0d0df;
+            line-height: 2;
+        }
+
+        /* CONNECT WITH PSC */
+
+        .connect-section {
+            background: #0b192a;
+            padding: 65px 10%;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 20px;
+            border: 1px solid #25435e;
+            border-radius: 8px;
+            background: #10243a;
+            color: #d0deec;
+            text-decoration: none;
+            font-weight: bold;
+            transition: border-color 0.2s, color 0.2s, transform 0.2s;
+        }
+
+        .social-link:hover {
+            border-color: #42d9ff;
+            color: #42d9ff;
+            transform: translateY(-3px);
+        }
+
+        .social-symbol {
+            color: #42d9ff;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px 20px;
+            text-align: center;
+            color: #8da2b7;
+            border-top: 1px solid #20364d;
+            line-height: 1.9;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* PSC VIDEO SERIES */
+
+        .series-section {
+            background: #0b192a;
+        }
+
+        .series-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .series-card {
+            display: flex;
+            flex-direction: column;
+            background: #10243a;
+            border: 1px solid #25435e;
+            border-radius: 10px;
+            padding: 25px;
+            min-height: 215px;
+        }
+
+        .series-card h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin: 14px 0 10px;
+        }
+
+        .series-card p {
+            color: #b6c8da;
+            line-height: 1.65;
+            flex-grow: 1;
+        }
+
+        .series-card a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #42d9ff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .series-card a:hover {
+            color: #ffffff;
+        }
+
+        .series-icon {
+            font-size: 29px;
+        }
+
+        /* FEATURED PLAYLIST PLAYER */
+
+        .watch-section {
+            background: #07111f;
+        }
+
+        .watch-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .video-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border: 1px solid #25435e;
+            border-radius: 12px;
+            background: #10243a;
+        }
+
+        .video-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .watch-note {
+            color: #b6c8da;
+            text-align: center;
+            line-height: 1.7;
+            margin-top: 18px;
+        }
+
+        /* MOBILE */
+
+        @media(max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .cards,
+            .about-grid,
+            .series-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 65px 7%;
+            }
+
+            .about-intro h2 {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="brand">
+
+            <img src="psc-logo-transparent.png"
+                 alt="PSC Logo">
+
+            <div>
+                <div class="brand-name">
+                    Physical Sciences Consultorium
+                </div>
+
+                <div class="brand-tagline">
+                    SCIENCE IS FOR EVERYONE
+                </div>
+            </div>
+
+        </div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#science">Science</a>
+            <a href="#series">Series</a>
+            <a href="#watch">Watch</a>
+            <a href="#connect">Connect</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HOMEPAGE -->
+
+    <section class="hero">
+
+        <div class="tag">WELCOME TO PSC</div>
+
+        <h1>
+            Science is for <span>Everyone.</span>
+        </h1>
+
+        <p>
+            Discover the beauty of physics, explore scientific ideas,
+            and understand the universe through learning,
+            research, and curiosity.
+        </p>
+
+        <a href="#science" class="button">
+            Explore PSC →
+        </a>
+
+    </section>
+
+
+    <!-- EXPLORE PSC -->
+
+    <section class="section explore" id="science">
+
+        <div class="section-title">
+
+            <div class="tag">DISCOVER PSC</div>
+
+            <h2>Explore the World of Science</h2>
+
+            <p>
+                A space for curiosity, scientific learning,
+                research and innovation.
+            </p>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🔬</div>
+                <h3>Science & Learning</h3>
+                <p>
+                    Explore physics concepts, educational resources
+                    and scientific discoveries.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎬</div>
+                <h3>PSC Video Series</h3>
+                <p>
+                    Discover our educational series covering
+                    physics, space and technology.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚛️</div>
+                <h3>Research & Innovation</h3>
+                <p>
+                    Explore scientific ideas, computational physics
+                    and interdisciplinary research.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Open Science & Technology</h3>
+                <p>
+                    Discover scientific software, Python tools,
+                    simulations and open-source projects.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PSC VIDEO SERIES -->
+
+    <section class="section series-section" id="series">
+
+        <div class="section-title">
+            <div class="tag">LEARN WITH PSC</div>
+            <h2>Explore Our Video Series</h2>
+            <p>
+                Discover curated PSC playlists exploring physics,
+                technology, mathematics, space and interdisciplinary science.
+            </p>
+        </div>
+
+        <div class="series-grid">
+
+            <div class="series-card">
+                <div class="series-icon">⚡</div>
+                <h3>The Semiconductor Age</h3>
+                <p>Explore the science and ideas behind semiconductor technology.</p>
+                <a href="https://youtube.com/playlist?list=PLKz5cD2w-1es" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🩺</div>
+                <h3>Medical Physics 101</h3>
+                <p>Discover the role of physics in medicine and healthcare technologies.</p>
+                <a href="https://youtube.com/playlist?list=PLh-AYGuVxwovYLtbkkhWWirwIlxfC0xdN" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🤖</div>
+                <h3>The Robotics Age</h3>
+                <p>Explore robotics through scientific principles and technological ideas.</p>
+                <a href="https://youtube.com/playlist?list=PLCACKd1oh1mI" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">∑</div>
+                <h3>Mathematics in AI Era</h3>
+                <p>Discover mathematical ideas connected with the age of artificial intelligence.</p>
+                <a href="https://youtube.com/playlist?list=PLaU792JXMYUQ" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">📈</div>
+                <h3>Econophysics 101</h3>
+                <p>Explore connections between physical principles and economic systems.</p>
+                <a href="https://youtube.com/playlist?list=PLh-AYGuVxwosMDK0kSdJbBbdc75osycTn" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🧠</div>
+                <h3>The Physics of Emotions</h3>
+                <p>Explore perspectives connecting physical science with human experience.</p>
+                <a href="https://youtube.com/playlist?list=PLUzan55dE7q0" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🔷</div>
+                <h3>Liquid Crystals</h3>
+                <p>Discover the physics of materials that combine fluidity with molecular order.</p>
+                <a href="https://youtube.com/playlist?list=PLe_4ysmpS9Mo" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🌌</div>
+                <h3>How We Know the Universe</h3>
+                <p>Explore how observations and scientific reasoning reveal the universe.</p>
+                <a href="https://youtube.com/playlist?list=PLh-AYGuVxwosgiLGzkOVItlosyjEehiaM" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🪐</div>
+                <h3>Space Science</h3>
+                <p>Explore scientific ideas about space and the cosmos.</p>
+                <a href="https://youtube.com/playlist?list=PLh-AYGuVxwosSo-wH0P93HTb-tDVUsZDc" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WATCH PSC -->
+
+    <section class="section watch-section" id="watch">
+
+        <div class="section-title">
+            <div class="tag">WATCH PSC</div>
+            <h2>Featured Playlist</h2>
+            <p>
+                Start exploring the PSC video library with our Liquid Crystals series.
+            </p>
+        </div>
+
+        <div class="watch-content">
+            <div class="video-frame">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/videoseries?list=PLe_4ysmpS9Mo"
+                    title="PSC Liquid Crystals playlist"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="watch-note">
+                To explore another topic, choose its playlist from the
+                <a href="#series" style="color:#42d9ff; text-decoration:none;">PSC Video Series collection</a>.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT PSC -->
+
+    <section class="section about" id="about">
+
+        <div class="about-intro">
+
+            <div class="tag">KNOW PSC</div>
+
+            <h2>About Physical Sciences Consultorium</h2>
+
+            <p>
+                Physical Sciences Consultorium (PSC) is an
+                educational and scientific initiative dedicated
+                to exploring, understanding and communicating
+                the wonders of the physical world.
+            </p>
+
+            <p>
+                We believe that science should not remain confined
+                to textbooks, laboratories or academic boundaries.
+                Scientific knowledge becomes more meaningful
+                when it is accessible, engaging and shared.
+            </p>
+
+            <p>
+                Through educational content, scientific exploration,
+                research-oriented activities and open resources,
+                PSC aims to connect scientific ideas with learners,
+                educators, researchers and curious minds.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-box">
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    To make the physical sciences accessible and
+                    engaging through quality educational resources,
+                    scientific communication, exploration and
+                    research-driven learning.
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h3>Our Vision</h3>
+
+                <p>
+                    To cultivate a culture of scientific curiosity,
+                    critical thinking and lifelong learning,
+                    connecting people with the ideas and discoveries
+                    that shape our understanding of the universe.
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h3>Our Approach</h3>
+
+                <p>
+                    We bring together conceptual understanding,
+                    visual storytelling, computational exploration
+                    and interdisciplinary perspectives to make
+                    science meaningful and approachable.
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <h3>Our Focus Areas</h3>
+
+                <ul class="focus-list">
+                    <li>Physics Education & Science Communication</li>
+                    <li>Scientific Research & Exploration</li>
+                    <li>Computational Physics & Scientific Computing</li>
+                    <li>Open Science & Educational Resources</li>
+                    <li>Interdisciplinary Scientific Learning</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONNECT WITH PSC -->
+
+    <section class="connect-section" id="connect">
+
+        <div class="section-title">
+            <div class="tag">STAY CONNECTED</div>
+            <h2>Connect with PSC</h2>
+            <p>
+                Follow Physical Sciences Consultorium for science,
+                learning resources, new video series and updates.
+            </p>
+        </div>
+
+        <div class="social-links">
+
+            <a class="social-link"
+               href="https://www.youtube.com/@PSConsultorium"
+               target="_blank" rel="noopener">
+                <span class="social-symbol">▶</span>
+                YouTube
+            </a>
+
+            <a class="social-link"
+               href="https://www.linkedin.com/company/physical-sciences-consultorium/"
+               target="_blank" rel="noopener">
+                <span class="social-symbol">in</span>
+                LinkedIn
+            </a>
+
+            <a class="social-link"
+               href="https://www.facebook.com/PhysicalSciencesConsultorium"
+               target="_blank" rel="noopener">
+                <span class="social-symbol">f</span>
+                Facebook
+            </a>
+
+            <a class="social-link"
+               href="https://www.instagram.com/psconsultorium/"
+               target="_blank" rel="noopener">
+                <span class="social-symbol">◎</span>
+                Instagram
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <strong>Physical Sciences Consultorium (PSC)</strong>
+
+        <br>
+
+        Science is for Everyone.
+
+        <br>
+
+        Exploring Science. Inspiring Curiosity.
+
+        <br>
+
+        © 2026 PSC. All rights reserved.
+
+    </footer>
+
+</body>
+</html>
