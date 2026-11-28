@@ -5,7 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Physical Sciences Consultorium | PSC</title>
+    <title>Physical Sciences Consultorium (PSC) | Science is for Everyone</title>
+    <meta name="description" content="Explore Physical Sciences Consultorium (PSC): physics education, science communication, research-oriented learning, space science, technology and educational video series. Science is for Everyone.">
+    <meta name="keywords" content="Physical Sciences Consultorium, PSC, physics education, science communication, physics video series, space science, open science">
+    <meta name="author" content="Physical Sciences Consultorium">
+
+    <!-- PSC favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Social sharing preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Physical Sciences Consultorium">
+    <meta property="og:title" content="Physical Sciences Consultorium (PSC) | Science is for Everyone">
+    <meta property="og:description" content="Explore physics, scientific ideas, educational video series and resources with Physical Sciences Consultorium. Science is for Everyone.">
+    <meta property="og:url" content="https://psc-live.github.io/psc-website/">
+    <meta property="og:image" content="https://psc-live.github.io/psc-website/psc-social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Physical Sciences Consultorium (PSC)">
+    <meta name="twitter:description" content="Science is for Everyone. Explore physics, learning and scientific ideas with PSC.">
+    <meta name="twitter:image" content="https://psc-live.github.io/psc-website/psc-social-preview.png">
 
     <style>
         * {
@@ -224,6 +246,133 @@
             line-height: 2;
         }
 
+        /* CONNECT WITH PSC */
+
+        .connect-section {
+            background: #0b192a;
+            padding: 65px 10%;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 20px;
+            border: 1px solid #25435e;
+            border-radius: 8px;
+            background: #10243a;
+            color: #d0deec;
+            text-decoration: none;
+            font-weight: bold;
+            transition: border-color 0.2s, color 0.2s, transform 0.2s;
+        }
+
+        .social-link:hover {
+            border-color: #42d9ff;
+            color: #42d9ff;
+            transform: translateY(-3px);
+        }
+
+        .social-symbol {
+            color: #42d9ff;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 1.15fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 38px auto 0;
+            text-align: left;
+        }
+
+        .contact-info, .contact-form {
+            background: #10243a;
+            border: 1px solid #25435e;
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .contact-info h3, .contact-form h3 {
+            color: #ffffff;
+            margin: 0 0 14px;
+        }
+
+        .contact-info p {
+            color: #c0d0df;
+            line-height: 1.8;
+        }
+
+        .contact-email {
+            color: #42d9ff;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-form label {
+            display: block;
+            color: #d0deec;
+            margin: 14px 0 7px;
+            font-weight: 600;
+        }
+
+        .contact-form input, .contact-form select, .contact-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 13px;
+            border: 1px solid #35536e;
+            border-radius: 7px;
+            background: #07111f;
+            color: #ffffff;
+            font: inherit;
+        }
+
+        .contact-form textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            margin-top: 18px;
+            padding: 13px 22px;
+            border: 0;
+            border-radius: 7px;
+            background: #42d9ff;
+            color: #07111f;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #ffffff;
+        }
+
+        .form-note {
+            color: #9fb3c7;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-top: 12px;
+        }
+
+        @media (max-width: 760px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* FOOTER */
 
         footer {
@@ -236,6 +385,147 @@
 
         footer strong {
             color: white;
+        }
+
+        /* PSC VIDEO SERIES */
+
+        .series-section {
+            background: #0b192a;
+        }
+
+        .series-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .series-card {
+            display: flex;
+            flex-direction: column;
+            background: #10243a;
+            border: 1px solid #25435e;
+            border-radius: 10px;
+            padding: 25px;
+            min-height: 215px;
+        }
+
+        .series-card h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin: 14px 0 10px;
+        }
+
+        .series-card p {
+            color: #b6c8da;
+            line-height: 1.65;
+            flex-grow: 1;
+        }
+
+        .series-card a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #42d9ff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .series-card a:hover {
+            color: #ffffff;
+        }
+
+        .series-icon {
+            font-size: 29px;
+        }
+
+        /* FEATURED PLAYLIST PLAYER */
+
+        .watch-section {
+            background: #07111f;
+        }
+
+        .watch-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .video-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border: 1px solid #25435e;
+            border-radius: 12px;
+            background: #10243a;
+        }
+
+        .video-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .watch-note {
+            color: #b6c8da;
+            text-align: center;
+            line-height: 1.7;
+            margin-top: 18px;
+        }
+
+        /* FOUNDER PROFILE */
+
+        .founder-section {
+            background: #07111f;
+        }
+
+        .founder-content {
+            display: grid;
+            grid-template-columns: minmax(240px, 0.85fr) minmax(0, 1.6fr);
+            gap: 48px;
+            align-items: center;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 32px;
+            background: linear-gradient(135deg, #10243a, #0b192a);
+            border: 1px solid #25435e;
+            border-radius: 14px;
+        }
+
+        .founder-photo {
+            width: 100%;
+            max-width: 340px;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: center 35%;
+            border-radius: 12px;
+            border: 2px solid #42d9ff;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .founder-copy h2 {
+            font-size: clamp(29px, 4vw, 40px);
+            margin: 8px 0 10px;
+        }
+
+        .founder-role {
+            color: #42d9ff;
+            font-weight: bold;
+            margin-bottom: 22px;
+        }
+
+        .founder-copy p {
+            color: #c0d0df;
+            line-height: 1.85;
+            margin-bottom: 15px;
+        }
+
+        .founder-belief {
+            color: #42d9ff !important;
+            font-size: 19px;
+            font-weight: bold;
+            margin-top: 20px;
         }
 
         /* MOBILE */
@@ -253,29 +543,68 @@
             }
 
             .cards,
-            .about-grid {
+            .about-grid,
+            .series-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 65px 7%;
             }
 
             .about-intro h2 {
                 font-size: 32px;
+            }
+
+            .founder-content {
+                grid-template-columns: 1fr;
+                gap: 28px;
+                padding: 22px;
+            }
+
+            .founder-photo {
+                max-width: 280px;
             }
         }
 
 
         /* FREE LEARNING RESOURCES */
         .resource-card {
-            max-width: 900px; margin: 0 auto; padding: 34px;
-            background: #0d1c2d; border: 1px solid #25435d;
-            border-radius: 12px; display: grid;
-            grid-template-columns: 1fr auto; gap: 24px; align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px;
+            background: #10243a;
+            border: 1px solid #25435e;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
         }
-        .resource-card h3 { color: #fff; font-size: 25px; margin-bottom: 12px; }
-        .resource-card p { color: #c0d0df; line-height: 1.7; margin-bottom: 10px; }
-        .resource-meta { color: #42d9ff; font-size: 13px; margin: 14px 0; }
-        .resource-note { color: #9fb2c5; font-size: 13px; margin-top: 14px; }
-        @media (max-width: 650px) {
-            .resource-card { grid-template-columns: 1fr; padding: 24px; }
+        .resource-card h3 {
+            color: #ffffff;
+            font-size: 24px;
+            margin: 12px 0;
+        }
+        .resource-card p {
+            color: #b6c8da;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        .resource-meta {
+            color: #42d9ff;
+            font-size: 13px;
+            margin: 14px 0;
+        }
+        .resource-note {
+            color: #9fb3c7;
+            font-size: 13px;
+        }
+        @media (max-width: 700px) {
+            .resource-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
 
     </style>
@@ -308,7 +637,11 @@
             <a href="#">Home</a>
             <a href="#science">Science</a>
             <a href="#resources">Resources</a>
+            <a href="#series">Series</a>
+            <a href="#watch">Watch</a>
+            <a href="#connect">Connect</a>
             <a href="#about">About</a>
+            <a href="#founder">Founder</a>
         </nav>
 
     </header>
@@ -399,24 +732,155 @@
 
 
     <!-- FREE LEARNING RESOURCES -->
+
     <section class="section" id="resources">
+
         <div class="section-title">
             <div class="tag">LEARN & PRACTISE</div>
             <h2>Free Learning Resources</h2>
-            <p>Open educational material from Physical Sciences Consultorium.</p>
+            <p>Study materials from Physical Sciences Consultorium.</p>
         </div>
+
         <div class="resource-card">
             <div>
                 <div class="tag">FREE PDF RESOURCE</div>
                 <h3>Physics Practice Set</h3>
-                <p>A collection of more than 1,200 Physics questions for independent practice and examination preparation.</p>
+                <p>
+                    A collection of 1,200+ Physics questions for independent
+                    practice and examination preparation.
+                </p>
                 <div class="resource-meta">161 pages &nbsp; | &nbsp; PDF &nbsp; | &nbsp; Free access</div>
-                <p>Suitable for M.Sc. (Physics) entrance examinations and graduate-level competitive examinations.</p>
-                <p class="resource-note">This practice set is provided for self-assessment. No answer key or worked solutions are included.</p>
+                <p>
+                    Useful for M.Sc. (Physics) entrance examinations and
+                    graduate-level competitive examinations.
+                </p>
+                <p class="resource-note">
+                    For independent practice. No answer key or solutions are provided.
+                </p>
             </div>
-            <a class="button" href="PSC_Physics_Practice_Set.pdf" target="_blank" rel="noopener">View / Download PDF</a>
+            <a class="button" href="PSC_Physics_Practice_Set.pdf"
+               target="_blank" rel="noopener">
+                View / Download PDF
+            </a>
         </div>
+
     </section>
+
+
+    <!-- PSC VIDEO SERIES -->
+
+    <section class="section series-section" id="series">
+
+        <div class="section-title">
+            <div class="tag">LEARN WITH PSC</div>
+            <h2>Explore Our Video Series</h2>
+            <p>
+                Discover curated PSC playlists exploring physics,
+                technology, mathematics, space and interdisciplinary science.
+            </p>
+        </div>
+
+        <div class="series-grid">
+
+            <div class="series-card">
+                <div class="series-icon">⚡</div>
+                <h3>The Semiconductor Age</h3>
+                <p>Explore the science and ideas behind semiconductor technology.</p>
+                <a href="https://youtube.com/playlist?list=PLKz5cD2w-1es" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🩺</div>
+                <h3>Medical Physics 101</h3>
+                <p>Discover the role of physics in medicine and healthcare technologies.</p>
+                <a href="https://youtube.com/playlist?list=PLh-AYGuVxwovYLtbkkhWWirwIlxfC0xdN" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🤖</div>
+                <h3>The Robotics Age</h3>
+                <p>Explore robotics through scientific principles and technological ideas.</p>
+                <a href="https://youtube.com/playlist?list=PLCACKd1oh1mI" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">∑</div>
+                <h3>Mathematics in AI Era</h3>
+                <p>Discover mathematical ideas connected with the age of artificial intelligence.</p>
+                <a href="https://youtube.com/playlist?list=PLaU792JXMYUQ" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">📈</div>
+                <h3>Econophysics 101</h3>
+                <p>Explore connections between physical principles and economic systems.</p>
+                <a href="https://youtube.com/playlist?list=PLh-AYGuVxwosMDK0kSdJbBbdc75osycTn" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🧠</div>
+                <h3>The Physics of Emotions</h3>
+                <p>Explore perspectives connecting physical science with human experience.</p>
+                <a href="https://youtube.com/playlist?list=PLUzan55dE7q0" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🔷</div>
+                <h3>Liquid Crystals</h3>
+                <p>Discover the physics of materials that combine fluidity with molecular order.</p>
+                <a href="https://youtube.com/playlist?list=PLe_4ysmpS9Mo" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🌌</div>
+                <h3>How We Know the Universe</h3>
+                <p>Explore how observations and scientific reasoning reveal the universe.</p>
+                <a href="https://youtube.com/playlist?list=PLh-AYGuVxwosgiLGzkOVItlosyjEehiaM" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+            <div class="series-card">
+                <div class="series-icon">🪐</div>
+                <h3>Space Science</h3>
+                <p>Explore scientific ideas about space and the cosmos.</p>
+                <a href="https://youtube.com/playlist?list=PLh-AYGuVxwosSo-wH0P93HTb-tDVUsZDc" target="_blank" rel="noopener">Watch Playlist →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WATCH PSC -->
+
+    <section class="section watch-section" id="watch">
+
+        <div class="section-title">
+            <div class="tag">WATCH PSC</div>
+            <h2>Featured Playlist</h2>
+            <p>
+                Start exploring the PSC video library with our Liquid Crystals series.
+            </p>
+        </div>
+
+        <div class="watch-content">
+            <div class="video-frame">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/videoseries?list=PLe_4ysmpS9Mo"
+                    title="PSC Liquid Crystals playlist"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="watch-note">
+                To explore another topic, choose its playlist from the
+                <a href="#series" style="color:#42d9ff; text-decoration:none;">PSC Video Series collection</a>.
+            </p>
+        </div>
+
+    </section>
+
 
     <!-- ABOUT PSC -->
 
@@ -509,6 +973,155 @@
                 </ul>
 
             </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- FOUNDER PROFILE -->
+
+    <section class="section founder-section" id="founder">
+
+        <div class="section-title">
+            <div class="tag">THE PERSON BEHIND PSC</div>
+            <h2>Meet the Founder</h2>
+            <p>The vision and commitment behind Physical Sciences Consultorium.</p>
+        </div>
+
+        <div class="founder-content">
+            <img class="founder-photo"
+                 src="founder-lalit.jpg"
+                 alt="Lalit Kumar Shukla, Founder of Physical Sciences Consultorium">
+
+            <div class="founder-copy">
+                <div class="tag">FOUNDER, PSC</div>
+                <h2>Lalit Kumar Shukla</h2>
+                <div class="founder-role">Physicist · Educator · Science Communicator</div>
+
+                <p>
+                    Lalit Kumar Shukla is a physicist, educator and science communicator
+                    committed to making scientific knowledge accessible, engaging and meaningful.
+                    He holds an M.Sc. in Physics from Banaras Hindu University (BHU) and is
+                    CSIR-UGC NET qualified. He also served as a Senior Research Fellow at the
+                    Physical Research Laboratory (PRL), Ahmedabad. Since 2018, he has been
+                    working as an Assistant Professor of Physics, combining academic teaching
+                    with a wider interest in scientific exploration and communication.
+                </p>
+
+                <p>
+                    He established Physical Sciences Consultorium (PSC) with a vision of
+                    creating an accessible platform for scientific learning, interdisciplinary
+                    thinking and the wider appreciation of physical sciences. Through educational
+                    video series, digital learning resources and explorations of emerging
+                    scientific ideas, PSC seeks to connect scientific concepts with curiosity,
+                    creativity and real-world understanding.
+                </p>
+
+                <p class="founder-belief">“Science is for everyone.”</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- CONNECT WITH PSC -->
+
+    <section class="connect-section" id="connect">
+
+        <div class="section-title">
+            <div class="tag">STAY CONNECTED</div>
+            <h2>Connect with PSC</h2>
+            <p>
+                Follow Physical Sciences Consultorium for science,
+                learning resources, new video series and updates.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Start a Conversation</h3>
+                <p>
+                    Have a question, an idea, or an opportunity to collaborate?
+                    PSC welcomes enquiries from students, educators, researchers
+                    and everyone curious about science.
+                </p>
+                <p><strong>Enquiries:</strong><br>
+                    <a class="contact-email" href="mailto:psconsultorium@gmail.com">psconsultorium@gmail.com</a>
+                </p>
+                <p><strong>We welcome:</strong><br>
+                    General enquiries, academic collaborations, research discussions,
+                    educational initiatives, and feedback.
+                </p>
+            </div>
+
+            <form class="contact-form"
+                  action="https://formsubmit.co/psconsultorium@gmail.com"
+                  method="POST">
+                <h3>Send an Enquiry</h3>
+                <input type="hidden" name="_subject" value="New enquiry from the PSC website">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="true">
+
+                <label for="psc-name">Your name</label>
+                <input id="psc-name" name="name" type="text" autocomplete="name" required>
+
+                <label for="psc-email">Email address</label>
+                <input id="psc-email" name="email" type="email" autocomplete="email" required>
+
+                <label for="psc-category">Enquiry category</label>
+                <select id="psc-category" name="Enquiry category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option>General Enquiry</option>
+                    <option>Academic Collaboration</option>
+                    <option>Research Discussion</option>
+                    <option>Educational Initiative</option>
+                    <option>Feedback and Suggestions</option>
+                </select>
+
+                <label for="psc-message">Your message</label>
+                <textarea id="psc-message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+                <p class="form-note">
+                    Your message will be handled through FormSubmit, a third-party
+                    form delivery service. On the first test submission, PSC may
+                    need to confirm the activation email sent to its contact address.
+                </p>
+            </form>
+        </div>
+
+        <div class="social-links">
+
+            <a class="social-link"
+               href="https://www.youtube.com/@PSConsultorium"
+               target="_blank" rel="noopener">
+                <span class="social-symbol">▶</span>
+                YouTube
+            </a>
+
+            <a class="social-link"
+               href="https://www.linkedin.com/company/physical-sciences-consultorium/"
+               target="_blank" rel="noopener">
+                <span class="social-symbol">in</span>
+                LinkedIn
+            </a>
+
+            <a class="social-link"
+               href="https://www.facebook.com/PhysicalSciencesConsultorium"
+               target="_blank" rel="noopener">
+                <span class="social-symbol">f</span>
+                Facebook
+            </a>
+
+            <a class="social-link"
+               href="https://www.instagram.com/psconsultorium/"
+               target="_blank" rel="noopener">
+                <span class="social-symbol">◎</span>
+                Instagram
+            </a>
 
         </div>
 
