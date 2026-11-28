@@ -289,6 +289,90 @@
             font-weight: bold;
         }
 
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 1.15fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 38px auto 0;
+            text-align: left;
+        }
+
+        .contact-info, .contact-form {
+            background: #10243a;
+            border: 1px solid #25435e;
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .contact-info h3, .contact-form h3 {
+            color: #ffffff;
+            margin: 0 0 14px;
+        }
+
+        .contact-info p {
+            color: #c0d0df;
+            line-height: 1.8;
+        }
+
+        .contact-email {
+            color: #42d9ff;
+            font-weight: bold;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-form label {
+            display: block;
+            color: #d0deec;
+            margin: 14px 0 7px;
+            font-weight: 600;
+        }
+
+        .contact-form input, .contact-form select, .contact-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 13px;
+            border: 1px solid #35536e;
+            border-radius: 7px;
+            background: #07111f;
+            color: #ffffff;
+            font: inherit;
+        }
+
+        .contact-form textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            margin-top: 18px;
+            padding: 13px 22px;
+            border: 0;
+            border-radius: 7px;
+            background: #42d9ff;
+            color: #07111f;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #ffffff;
+        }
+
+        .form-note {
+            color: #9fb3c7;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-top: 12px;
+        }
+
+        @media (max-width: 760px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* FOOTER */
 
         footer {
@@ -877,6 +961,59 @@
                 Follow Physical Sciences Consultorium for science,
                 learning resources, new video series and updates.
             </p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Start a Conversation</h3>
+                <p>
+                    Have a question, an idea, or an opportunity to collaborate?
+                    PSC welcomes enquiries from students, educators, researchers
+                    and everyone curious about science.
+                </p>
+                <p><strong>Enquiries:</strong><br>
+                    <a class="contact-email" href="mailto:psconsultorium@gmail.com">psconsultorium@gmail.com</a>
+                </p>
+                <p><strong>We welcome:</strong><br>
+                    General enquiries, academic collaborations, research discussions,
+                    educational initiatives, and feedback.
+                </p>
+            </div>
+
+            <form class="contact-form"
+                  action="https://formsubmit.co/psconsultorium@gmail.com"
+                  method="POST">
+                <h3>Send an Enquiry</h3>
+                <input type="hidden" name="_subject" value="New enquiry from the PSC website">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="true">
+
+                <label for="psc-name">Your name</label>
+                <input id="psc-name" name="name" type="text" autocomplete="name" required>
+
+                <label for="psc-email">Email address</label>
+                <input id="psc-email" name="email" type="email" autocomplete="email" required>
+
+                <label for="psc-category">Enquiry category</label>
+                <select id="psc-category" name="Enquiry category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option>General Enquiry</option>
+                    <option>Academic Collaboration</option>
+                    <option>Research Discussion</option>
+                    <option>Educational Initiative</option>
+                    <option>Feedback and Suggestions</option>
+                </select>
+
+                <label for="psc-message">Your message</label>
+                <textarea id="psc-message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+                <p class="form-note">
+                    Your message will be handled through FormSubmit, a third-party
+                    form delivery service. On the first test submission, PSC may
+                    need to confirm the activation email sent to its contact address.
+                </p>
+            </form>
         </div>
 
         <div class="social-links">
