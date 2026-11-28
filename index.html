@@ -567,6 +567,46 @@
             }
         }
 
+
+        /* FREE LEARNING RESOURCES */
+        .resource-card {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px;
+            background: #10243a;
+            border: 1px solid #25435e;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+        .resource-card h3 {
+            color: #ffffff;
+            font-size: 24px;
+            margin: 12px 0;
+        }
+        .resource-card p {
+            color: #b6c8da;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        .resource-meta {
+            color: #42d9ff;
+            font-size: 13px;
+            margin: 14px 0;
+        }
+        .resource-note {
+            color: #9fb3c7;
+            font-size: 13px;
+        }
+        @media (max-width: 700px) {
+            .resource-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
     </style>
 </head>
 
@@ -596,6 +636,7 @@
         <nav>
             <a href="#">Home</a>
             <a href="#science">Science</a>
+            <a href="#resources">Resources</a>
             <a href="#series">Series</a>
             <a href="#watch">Watch</a>
             <a href="#connect">Connect</a>
@@ -688,6 +729,42 @@
 
     </section>
 
+
+
+    <!-- FREE LEARNING RESOURCES -->
+
+    <section class="section" id="resources">
+
+        <div class="section-title">
+            <div class="tag">LEARN & PRACTISE</div>
+            <h2>Free Learning Resources</h2>
+            <p>Study materials from Physical Sciences Consultorium.</p>
+        </div>
+
+        <div class="resource-card">
+            <div>
+                <div class="tag">FREE PDF RESOURCE</div>
+                <h3>Physics Practice Set</h3>
+                <p>
+                    A collection of 1,200+ Physics questions for independent
+                    practice and examination preparation.
+                </p>
+                <div class="resource-meta">161 pages &nbsp; | &nbsp; PDF &nbsp; | &nbsp; Free access</div>
+                <p>
+                    Useful for M.Sc. (Physics) entrance examinations and
+                    graduate-level competitive examinations.
+                </p>
+                <p class="resource-note">
+                    For independent practice. No answer key or solutions are provided.
+                </p>
+            </div>
+            <a class="button" href="PSC_Physics_Practice_Set.pdf"
+               target="_blank" rel="noopener">
+                View / Download PDF
+            </a>
+        </div>
+
+    </section>
 
 
     <!-- PSC VIDEO SERIES -->
