@@ -389,6 +389,61 @@
             margin-top: 18px;
         }
 
+        /* FOUNDER PROFILE */
+
+        .founder-section {
+            background: #07111f;
+        }
+
+        .founder-content {
+            display: grid;
+            grid-template-columns: minmax(240px, 0.85fr) minmax(0, 1.6fr);
+            gap: 48px;
+            align-items: center;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 32px;
+            background: linear-gradient(135deg, #10243a, #0b192a);
+            border: 1px solid #25435e;
+            border-radius: 14px;
+        }
+
+        .founder-photo {
+            width: 100%;
+            max-width: 340px;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: center 35%;
+            border-radius: 12px;
+            border: 2px solid #42d9ff;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .founder-copy h2 {
+            font-size: clamp(29px, 4vw, 40px);
+            margin: 8px 0 10px;
+        }
+
+        .founder-role {
+            color: #42d9ff;
+            font-weight: bold;
+            margin-bottom: 22px;
+        }
+
+        .founder-copy p {
+            color: #c0d0df;
+            line-height: 1.85;
+            margin-bottom: 15px;
+        }
+
+        .founder-belief {
+            color: #42d9ff !important;
+            font-size: 19px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
         /* MOBILE */
 
         @media(max-width: 700px) {
@@ -415,6 +470,16 @@
 
             .about-intro h2 {
                 font-size: 32px;
+            }
+
+            .founder-content {
+                grid-template-columns: 1fr;
+                gap: 28px;
+                padding: 22px;
+            }
+
+            .founder-photo {
+                max-width: 280px;
             }
         }
 
@@ -451,6 +516,7 @@
             <a href="#watch">Watch</a>
             <a href="#connect">Connect</a>
             <a href="#about">About</a>
+            <a href="#founder">Founder</a>
         </nav>
 
     </header>
@@ -747,6 +813,54 @@
 
             </div>
 
+        </div>
+
+    </section>
+
+
+
+
+    <!-- FOUNDER PROFILE -->
+
+    <section class="section founder-section" id="founder">
+
+        <div class="section-title">
+            <div class="tag">THE PERSON BEHIND PSC</div>
+            <h2>Meet the Founder</h2>
+            <p>The vision and commitment behind Physical Sciences Consultorium.</p>
+        </div>
+
+        <div class="founder-content">
+            <img class="founder-photo"
+                 src="founder-lalit.jpg"
+                 alt="Lalit Kumar Shukla, Founder of Physical Sciences Consultorium">
+
+            <div class="founder-copy">
+                <div class="tag">FOUNDER, PSC</div>
+                <h2>Lalit Kumar Shukla</h2>
+                <div class="founder-role">Physicist · Educator · Science Communicator</div>
+
+                <p>
+                    Lalit Kumar Shukla is a physicist, educator and science communicator
+                    committed to making scientific knowledge accessible, engaging and meaningful.
+                    He holds an M.Sc. in Physics from Banaras Hindu University (BHU) and is
+                    CSIR-UGC NET qualified. He also served as a Senior Research Fellow at the
+                    Physical Research Laboratory (PRL), Ahmedabad. Since 2018, he has been
+                    working as an Assistant Professor of Physics, combining academic teaching
+                    with a wider interest in scientific exploration and communication.
+                </p>
+
+                <p>
+                    He established Physical Sciences Consultorium (PSC) with a vision of
+                    creating an accessible platform for scientific learning, interdisciplinary
+                    thinking and the wider appreciation of physical sciences. Through educational
+                    video series, digital learning resources and explorations of emerging
+                    scientific ideas, PSC seeks to connect scientific concepts with curiosity,
+                    creativity and real-world understanding.
+                </p>
+
+                <p class="founder-belief">“Science is for everyone.”</p>
+            </div>
         </div>
 
     </section>
